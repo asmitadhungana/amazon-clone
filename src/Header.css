@@ -1,0 +1,71 @@
+.header {
+    background-color:  #131921;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top:0; /*distance from top */
+    z-index: 100; /*show nothing above the navbar/header */
+}
+
+.header__logo {
+    width: 100px;
+    object-fit: container; /*if the screen resizes to smaller, always keep the amazon logo w.r.t aspect ratio */
+    margin-top: 15px 20px 15px 20px;
+}
+
+.header__nav {
+     display: flex; /*put in the same line as other children inside the parent compo */
+     justify-content: space-evenly;
+}
+
+.header__option {
+    display: flex;
+    flex-direction: column; /*by default, it is right or it lays compo's children out in the same line, changing to column gets them in a column */ 
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header__option__lineOne {
+    font-size: 10px;
+}
+
+.header__option__lineTwo {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.header__optionBasket {
+    display: flex;
+    align-items: center;
+}
+
+.header__basketCount {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header__link {
+    color: white;
+    text-decoration: none; /* to remove the underline that comes for the links by default */
+}
+
+.header__search {
+    display: flex;
+    flex:1; /*stretch the search input to take all the remaining space in its parent compo*/
+}
+
+.header__searchInput {
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+}
+
+.header__searchIcon {
+    padding: 5px;
+    height: 22px !important;
+    background-color:orange;
+}
+
+
+
