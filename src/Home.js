@@ -16,7 +16,7 @@ function Home() {
             <div className="home__row">
             <Product 
             id="123456"
-            title ="Sony Home Theater Projector VPL-VW295ES: Full 4K HDR Video Projector for TV, Movies and Gaming - Home Cinema Projector with 1,500 Lumens for Brightness and 3 SXRD Imagers for Crisp, Rich Color"
+            title ="Sony Home Theater Projector VPL-VW295ES: Full 4K HDR Video Projector for TV, Movies and Gaming - Home Cinema Projector"
             price={4998}
             image="https://m.media-amazon.com/images/I/71OHNxC8eQL._AC_SX960_SY720_.jpg"
             rating={5}

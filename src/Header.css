@@ -10,7 +10,7 @@
 .header__logo {
     width: 100px;
     object-fit: container; /*if the screen resizes to smaller, always keep the amazon logo w.r.t aspect ratio */
-    margin-top: 15px 20px 15px 20px;
+    margin: 8px 15px 3px 5px;
 }
 
 .header__nav {
