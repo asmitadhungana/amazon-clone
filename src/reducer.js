@@ -1,14 +1,6 @@
 export const initialState = {
-    basket: [
-        {
-            id:"17683456",
-            title :"Sony Home Theater Projector VPL-VW295ES: Full 4K HDR Video Projector for TV, Movies and Gaming - Home Cinema Projector",
-            price:699348,
-            image:"https://m.media-amazon.com/images/I/71OHNxC8eQL._AC_SX960_SY720_.jpg",
-            rating:4
-        }
-    ],
-    // user: null
+    basket: [],
+    user: null,
 };
 
 export const getBasketTotal = (basket) => 
@@ -17,6 +9,11 @@ export const getBasketTotal = (basket) =>
 
 const reducer = (state, action) => {
     switch(action.type) {
+        case "SET_USER":
+            return {
+                ...state, 
+                user: action.user
+            }
         case "ADD_TO_BASKET":
             //Logic for adding item to basket
             return {

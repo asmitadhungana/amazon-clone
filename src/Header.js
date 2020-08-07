@@ -4,12 +4,18 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppinBasketIcon from "@material-ui/icons/ShoppingBasket";
 import "./Header.css";
 import { useStateValue } from './StateProvider';
+import { auth } from './firebase';
 
 
 function Header() {
-    const [{basket}, dispatch] = useStateValue(); //returns [state, dispatch] | we further used object destructuring to fetch {basket} state form state
+    const [{ basket, user }] = useStateValue(); //returns [state, dispatch] | we further used object destructuring to fetch {basket} state form state
+    console.log(user);
 
-    console.log(basket);
+    const loginHandler = () => {
+        if (user) {
+            auth.signOut();
+        }
+    };
 
     return (
         <nav className= "header">
@@ -32,10 +38,11 @@ function Header() {
             <div className="header__nav">
 
                 {/* 1st link */}
-                <Link to="/login" className="header__link">
-                <div className="header__option">
-                <span className="header__option__lineOne">Hello</span>
-                <span className="header__option__lineTwo">Sign In</span>
+                {/* If user is logged out or null, push to the login page, else not  */}
+                <Link to={ !user && "/login" } className="header__link">
+                <div onClick={ loginHandler } className="header__option">
+                <span className="header__option__lineOne">Hello {user?.email} </span>
+                <span className="header__option__lineTwo">{ user ? "Sign Out" : "Sign In" }</span>
                 </div>
                 </Link>
 
