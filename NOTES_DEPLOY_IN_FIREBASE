@@ -1,0 +1,17 @@
+Integrate Firebase:
+    Log-in into firebase.com
+    Create a new project
+    Set its nickname
+
+    In it's authentication portion, copy the config portion and paste it in your firebase.js
+
+Commands for deploying/hosting your webapp in firebase:
+IN CLI:
+    $ firebase login     (if you aren't logged in already )
+    $ firebase init
+        CHOOSE: Hosting: Configure and deploy Firebase Hosting sites (using space and then enter)
+        ? Please select an option: Use an existing project
+        ? Select a default Firebase project for this directory: clone-769e2 (amazon-clone)
+        ? What do you want to use as your public directory? build
+        ? Configure as a single-page app (rewrite all urls to/index.html)? Yes
+    $ firebase deploy
